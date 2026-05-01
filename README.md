@@ -80,23 +80,23 @@ Developing a responsive, interactive website for a small business using:
 </div>
 
 <script>
-const text = "Full-Stack Developer";
-const typingElement = document.getElementById('typing-text');
-let index = 0;
-
-function typeText() {
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeText, 100);
-  } else {
-    setTimeout(() => {
-      typingElement.textContent = '';
-      index = 0;
-      typeText();
-    }, 2000);
+  const text = "Full-Stack Developer";
+  const typingElement = document.getElementById('typing-text');
+  let index = 0;
+  
+  function typeText() {
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeText, 100);
+    } else {
+      setTimeout(() => {
+        typingElement.textContent = '';
+        index = 0;
+        typeText();
+      }, 2000);
+    }
   }
-}
-
-typeText();
+  
+  typeText();
 </script>
